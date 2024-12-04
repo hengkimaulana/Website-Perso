@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Jarak dan Bearing</title>
+  <link rel="stylesheet" href="stylekalkulasi.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    .back-home {
+      margin-top: 10px;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .back-home a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Geomatika.png" alt="Logo Teknik Geomatika">
+      <div class="info">
+        <h2>Teknik Geomatika ITS</h2>
+        <a href="informasi.html" target="_blank">Informasi Lengkap</a>
+      </div>
+    </div>
+    <!-- Back to Homepage Button -->
+    <div class="back-home">
+      <a href="homepage1.html">Kembali ke Homepage</a>
+    </div>
+  </header>
+
+  <!-- Konten Utama -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>Kalkulator Manual</h1>
+      <label for="lat1">Lintang Titik Pergi:</label>
+      <input type="text" id="lat1" placeholder="Masukkan lintang titik pergi">
+
+      <label for="lon1">Bujur Titik Pergi:</label>
+      <input type="text" id="lon1" placeholder="Masukkan bujur titik pergi">
+
+      <label for="lat2">Lintang Titik Pulang:</label>
+      <input type="text" id="lat2" placeholder="Masukkan lintang titik pulang">
+
+      <label for="lon2">Bujur Titik Pulang:</label>
+      <input type="text" id="lon2" placeholder="Masukkan bujur titik pulang">
+
+      <button onclick="calculateDistance()">Hitung Jarak dan Bearing</button>
+      <button id="remove-start">Hapus Titik Pergi</button>
+      <button id="remove-end">Hapus Titik Pulang</button>
+
+      <div class="result" id="result">Hasil akan ditampilkan di sini.</div>
+      <div id="bearing-result">
+        <p>Sudut Keberangkatan (Initial Bearing): <span id="initial-bearing"></span></p>
+        <p>Sudut Kedatangan (Final Bearing): <span id="final-bearing"></span></p>
+      </div>
+
+      <div class="basemap-select">
+        <label for="basemap-selector">Pilih Basemap:</label>
+        <select id="basemap-selector">
+          <option value="osm">OpenStreetMap</option>
+          <option value="satellite">Satellite</option>
+          <option value="terrain">Terrain</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Map Container -->
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

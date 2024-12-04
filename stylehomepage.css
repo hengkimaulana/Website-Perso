@@ -1,0 +1,206 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparansi opsional */
+  padding: 10px 20px; /* Menambah ruang sekitar konten */
+}
+
+.header .navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.header .navbar-brand img {
+  height: 40px;
+  margin-right: 10px; /* Spasi antara logo dan tulisan */
+}
+
+.header .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.header .navbar-nav {
+  margin-left: auto; /* Memindahkan menu ke kanan */
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  text-transform: uppercase; /* Opsional: Membuat teks kapital */
+}
+
+.header .nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+.header .navbar-toggler {
+  border-color: white;
+  color: white;
+}
+
+.header .navbar-toggler-icon {
+  background-color: white;
+}
+
+
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 90vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 255, 0.2), /* Lebih tebal di atas */
+      rgba(0, 0, 255, 0.01) /* Lebih tipis di bawah */
+    );
+    z-index: 0;
+  }
+  
+  .hero h1,
+  .hero p,
+  .hero .btn {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Kurangi jarak bawah judul */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 0; /* Hilangkan jarak atas paragraf */
+    margin-bottom: 1.5rem; /* Opsional: Sesuaikan jarak bawah paragraf */
+  }
+  
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    background-color: rgba(145, 141, 141, 0.8);
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.1s ease;
+  }
+
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 15px 40px; /* Memperbesar ruang dalam tombol */
+    background-color: rgba(145, 141, 141, 0.8);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Membulatkan sudut tombol */
+    transition: background-color 0.1s ease, transform 0.2s ease;
+    text-decoration: none; /* Hilangkan garis bawah */
+  }
+  
+  .hero .btn:hover {
+    background-color: transparent; /* Transparan tanpa fill */
+    color: white; /* Teks putih */
+    border: 2px solid white; /* Outline putih */
+    border-radius: 30px; /* Tetap bulat saat hover */
+    transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
+    transition: all 0.3s ease; /* Transisi halus untuk efek hover */
+  }
+  
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer .social-icons a {
+    color: #007bff;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #0056b3;
+  }
+  
+  .footer p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .hero .btn {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  

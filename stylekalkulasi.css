@@ -1,0 +1,365 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 35%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.sidebar label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.sidebar input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.sidebar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.sidebar .result {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.sidebar .basemap-select {
+  margin-top: 20px;
+}
+
+.sidebar select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Map Container */
+.map-container {
+  width: 65%;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+  }
+
+  .map-container {
+      width: 100%;
+      height: 60vh;
+  }
+}
+
+/* Tambahan untuk Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+header .info {
+  display: flex;
+  flex-direction: column;
+}
+
+header .info h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+header .info a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+header .info a:hover {
+  text-decoration: underline;
+}
+
+/* Kontainer Utama */
+.container {
+  margin-top: 60px; /* Memberikan ruang untuk header */
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f9;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar input,
+.sidebar button,
+.sidebar select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.sidebar .result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Map Container */
+.map-container {
+  flex: 1;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Hero Section - Button Styles */
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  background-color: transparent; /* Transparan tanpa fill */
+  color: white; /* Teks putih */
+  border: 2px solid white; /* Outline putih */
+  border-radius: 5px; /* Opsional, untuk sudut melengkung */
+  transition: all 0.3s ease; /* Transisi efek hover */
+}
+
+.hero .btn:hover {
+  background-color: white; /* Latar belakang putih saat hover */
+  color: #28a745; /* Teks hijau saat hover */
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+.header .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header .navbar-brand img {
+  height: 40px;
+}
+
+.header .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.header .nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 255, 0.2), /* Lebih tebal di atas */
+    rgba(0, 0, 255, 0.01) /* Lebih tipis di bawah */
+  );
+  z-index: 0;
+}
+
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  background-color: rgba(145, 141, 141, 0.8);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.1s ease;
+}
+
+.hero .btn:hover {
+  background-color: transparent; /* Transparan tanpa fill */
+  color: white; /* Teks putih */
+  border: 2px solid white; /* Outline putih */
+  border-radius: 5px; /* Opsional, untuk sudut melengkung */
+  transition: all 0.3s ease; /* Transisi efek hover */
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer .social-icons a {
+  color: #007bff;
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #0056b3;
+}
+
+.footer p {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
